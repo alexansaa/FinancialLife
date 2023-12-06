@@ -1,0 +1,17 @@
+require 'faker'
+
+FactoryBot.define do
+  factory :entity do
+    name { Faker::Name.name }
+    amount { Faker::Number }
+    association :user, factory: :user
+
+    transient do
+      with_group_entities { false }
+    end
+
+    after(:create) do |group, evaluator|
+      create_list(:group_entities, 1, entity: entity) if evaluator.with_group_entities
+    end
+  end
+end
