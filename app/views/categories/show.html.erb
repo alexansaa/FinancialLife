@@ -1,0 +1,9 @@
+<div>
+  <%= link_to '<', categories_path  %>
+  This is the individual transaction page
+  <p>Total amout: $<%= @total_amount %></p>
+  <% @transactions.each do |item|  %>
+    <%= render partial: 'transactions/transaction', locals: { transaction: item.id } %>
+  <% end %>
+  <%= link_to 'Add New Transaction', new_transaction_path(category_id: @category.id) %>
+</div>
