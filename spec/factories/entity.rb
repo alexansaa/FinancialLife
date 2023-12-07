@@ -3,7 +3,7 @@ require 'faker'
 FactoryBot.define do
   factory :entity do
     name { Faker::Name.name }
-    amount { Faker::Number }
+    amount { Faker::Number.number(digits: 2) }
     association :user, factory: :user
 
     transient do
