@@ -1,0 +1,47 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div>
+  <%= link_to '<', categories_path  %>
+  <%= form_with(model: @group, url: categories_path, method: :post) do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :icon %>
+      <%= form.collection_select :icon, @icon_files, :itself, ->(file) { file.split('-').first }, { prompt: 'Select an option' }, class: 'select-field' %>
+    </div>
+
+    <div>
+      <%= form.submit 'Save' %>
+    </div>
+  <% end %>
+</div>
+
+<div id="selected-icon-preview"></div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var selectField = document.querySelector('.select-field');
+    var previewContainer = document.getElementById('selected-icon-preview');
+
+    if (selectField) {
+      selectField.addEventListener('change', function() {
+        var selectedIcon = this.value;
+        console.log(selectedIcon);
+
+        previewContainer.innerHTML = '';
+
+        if (selectedIcon) {
+          var img = document.createElement('img');
+          img.src = '/icons/' + selectedIcon;
+          img.alt = selectedIcon;
+          previewContainer.appendChild(img);
+        }
+      });
+    }
+  });
+</script>
+

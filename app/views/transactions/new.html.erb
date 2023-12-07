@@ -1,0 +1,23 @@
+<div>
+  <%= link_to '<', category_path(@category)  %>
+  <%= form_with(model: @entity, url: transactions_path, method: :post) do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :amount %>
+      <%= form.number_field :amount, step: '0.01' %>
+    </div>
+
+    <div>
+      <%= form.label :category %>
+      <%= form.collection_select :category, Group.all, :id, :name, { prompt: 'Select an option' }, class: 'select-field' %>
+    </div>
+
+    <div>
+      <%= form.submit 'Save' %>
+    </div>
+  <% end %>
+</div>
