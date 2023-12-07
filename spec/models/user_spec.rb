@@ -21,5 +21,4 @@ RSpec.describe User, type: :model do
     association = described_class.reflect_on_association(:entities)
     expect(association.macro).to eq(:has_many)
   end
-
 end
