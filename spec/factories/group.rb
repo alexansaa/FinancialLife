@@ -10,8 +10,8 @@ FactoryBot.define do
       with_group_entities { false }
     end
 
-    after(:create) do |group, evaluator|
-      create_list(:group_entities, 1, group: group) if evaluator.with_group_entities
+    after(:create) do |mygroup, evaluator|
+      create_list(:group_entities, 1, group: mygroup) if evaluator.with_group_entities
     end
   end
 end

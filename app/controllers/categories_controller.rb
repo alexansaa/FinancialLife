@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @icon_path = 'public/icons/' + params[:group][:icon]
+    @icon_path = "public/icons/#{params[:group][:icon]}"
     @category = current_user.groups.create(name: params[:group][:name], icon: @icon_path)
     if @category.save
       redirect_to categories_path, notice: 'Categorie was successfully created'
