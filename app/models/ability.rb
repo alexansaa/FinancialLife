@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     else
       can :read, :splash
+      can :check, HealthController
     end
   end
 end
