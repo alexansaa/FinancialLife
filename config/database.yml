@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: financial_life_production
-  username: financial_life
-  password: <%= ENV["FINANCIAL_LIFE_DATABASE_PASSWORD"] %>
+  database: <%= ENV["DATABASE"] %>
+  username: <%= ENV["USER_NAME"] %>
+  password: <%= ENV["PASSWORD"] %>
+  url: <%= ENV['INTERNAL_DATABASE_URL'] %>
