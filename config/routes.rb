@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'health/check'
   devise_for :users, controllers: { registrations: 'registrations' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :new, :create, :show]
   resources :transactions, only: [:new, :create]
   
+  get 'health/check', to: 'health#check'
 
   # Defines the root path route ("/")
   # root "posts#index"
