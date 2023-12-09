@@ -6,10 +6,11 @@
 @font-face {
   font-family: "WebSymbolsRegular";
   src: url("websymbols-regular-webfont.eot");
-  src: url("websymbols-regular-webfont.eot#iefix") format('embedded-opentype'),
-       url("websymbols-regular-webfont.woff") format('woff'),
-       url("websymbols-regular-webfont.ttf") format('truetype'),
-       url("websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+  src: 
+    url("websymbols-regular-webfont.eot#iefix") format('embedded-opentype'),
+    url("websymbols-regular-webfont.woff") format('woff'),
+    url("websymbols-regular-webfont.ttf") format('truetype'),
+    url("websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -36,7 +37,7 @@
 .simbols_font {
   text-decoration: none;
   color: white;
-  font-family: 'WebSymbolsRegular';
+  font-family: 'WebSymbolsRegular', sans-serif;
   font-size: 30px;
 }
 
@@ -143,7 +144,7 @@
 }
 
 body {
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
 }
 
 .save_btn {
