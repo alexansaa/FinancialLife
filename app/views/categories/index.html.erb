@@ -1,12 +1,31 @@
-<div>
-  This is the categories page!
-  <% @categories.each do |item| %>
-    <% @regs = item.group_entities %>
-    <% @total_category = 0 %>
-    <% @regs.each do |reg| %>
-      <% @total_category += Entity.find(reg.entity_id).amount %>
-    <% end %>
-    <%= render partial: 'categories/category', locals: { category: item, amount: @total_category } %>
-  <% end %>
-  <%= link_to 'Create New Category', new_category_path %>
-</div>
+<head>
+  <%= stylesheet_link_tag "categories" %>
+</head>
+<body>
+  <div class="categories_container">
+    <div class="transaction_header proxima_bold_font">
+      <div>
+        <%= link_to "n", categories_path, class: "simbols_font" %>
+      </div>
+      <div class="categories_title">
+        CATEGORIES
+      </div>
+      <div>
+        <%= link_to 'L', categories_path, class: "simbols_font" %>
+      </div>
+    </div>
+    <div class="fill_container">
+      <% @categories.each do |item| %>
+        <% @regs = item.group_entities %>
+        <% @total_category = 0 %>
+        <% @regs.each do |reg| %>
+          <% @total_category += Entity.find(reg.entity_id).amount %>
+        <% end %>
+        <%= render partial: 'categories/category', locals: { category: item, amount: @total_category } %>
+      <% end %>
+    </div>
+    <div class="action_btn proxima_light_font">
+      <%= link_to 'Create New Category', new_category_path %>
+    </div>
+  </div>
+</body>

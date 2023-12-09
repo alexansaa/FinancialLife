@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def new
     @group = Group.new
-    @icon_files = Dir.glob('public/icons/*.png').map do |file_path|
+    @icon_files = Dir.glob(Rails.root.join('app', 'assets', 'images', '**', '*.png')).map do |file_path|
       File.basename(file_path)
     end
   end
@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @icon_path = "public/icons/#{params[:group][:icon]}"
+    @icon_path = "categories/#{params[:group][:icon]}"
     @category = current_user.groups.create(name: params[:group][:name], icon: @icon_path)
     if @category.save
       redirect_to categories_path, notice: 'Categorie was successfully created'
