@@ -16,12 +16,12 @@
       </div>
     </div>
 
-    <div>
+    <div class="category_input_container">
       <%= form.text_field :name, placeholder: "Category Name", class: "new_category_input" %>
     </div>
 
     <div class="category_icon_select">
-      <%= form.collection_select :icon, @icon_files, :itself, ->(file) { file.split('-').first }, { prompt: 'Select an icon' }, class: 'select-field' %>
+      <%= form.collection_select :icon, @icon_files, :itself, ->(file) { file.split('.').first }, { prompt: 'Select an icon' }, class: 'select-field' %>
     </div>
   <% end %>
   <div id="selected-icon-preview" class="category_new_icon"></div>
@@ -41,7 +41,7 @@
 
         if (selectedIcon) {
           var img = document.createElement('img');
-          img.src = '/icons/' + selectedIcon;
+          img.src = '/assets/categories/' + selectedIcon;
           img.alt = selectedIcon;
           previewContainer.appendChild(img);
         }

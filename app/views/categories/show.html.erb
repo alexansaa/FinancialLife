@@ -17,9 +17,9 @@
     <p>Total amout</p>
     <h3> $<%= @total_amount %></h3>
   </div>
-  <div>
+  <div class="fill_container">
     <% @transactions.each do |item|  %>
-      <%= render partial: 'transactions/transaction', locals: { transaction: item.id, date: item.created_at, value: Entity.find(item.entity_id).amount } %>
+      <%= render partial: 'transactions/transaction', locals: { transaction: item } %>
     <% end %>
   </div>
   <div class="action_btn proxima_light_font">

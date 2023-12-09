@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def new
     @group = Group.new
-    @icon_files = Dir.glob(Rails.root.join('app', 'assets', 'images', '**', '*.png')).map do |file_path|
+    @icon_files = Dir.glob(Rails.root.join('app', 'assets', 'images', 'categories', '*.png')).map do |file_path|
       File.basename(file_path)
     end
   end
