@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url("websymbols-regular-webfont.eot");
+  src: url("websymbols-regular-webfont.eot#iefix") format('embedded-opentype'),
+       url("websymbols-regular-webfont.woff") format('woff'),
+       url("websymbols-regular-webfont.ttf") format('truetype'),
+       url("websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #F5F6F8;
+}
+
+.registrations_header {
+  background-color: #3778c2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.simbols_font {
+  text-decoration: none;
+  color: white;
+  font-family: 'WebSymbolsRegular';
+}
+
+.proxima_light_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.registrations_title {
+  color: white;
+  font-size: 10px;
+}
+
+.registrations_title input[type="submit"] {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+}
+
+.registration_input {
+  border: 1px solid rgb(210, 207, 207);
+  background-color: white;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 5px;
+  color: rgb(211, 208, 208);
+  width: 100%;
+}
+
+.registration_input::placeholder {
+  padding-left: 5px;
+  color: rgb(211, 208, 208);
+}
+
+.registration_input::value {
+  padding-left: 5px;
+  margin-left: 5px;
+  color: rgb(211, 208, 208);
+}
+
+.registrations_fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.registrations_fields div {
+  width: 90%;
+}

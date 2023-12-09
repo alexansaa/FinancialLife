@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.proxima_bold_font {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+.proxima_light_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.splash_title {
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 200px;
+}
+
+.splash_btns {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.splash_login {
+  background-color: #3778c2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 3px;
+  width: 90vw;
+}
+
+.splash_login a {
+  text-decoration: none;
+  color: white;
+}
+
+.splash_signup {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.splash_signup a {
+  text-decoration: none;
+  color: darkgrey;
+}
