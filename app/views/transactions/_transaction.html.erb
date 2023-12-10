@@ -1,0 +1,19 @@
+<div class="transaction_elmnt proxima_light_font">
+  <div class="transaction_data">
+    <% @myTrans = Entity.find(transaction.entity_id) %>
+    <h3>
+      <%= @myTrans.name %>
+    </h3>
+    <p>
+      Transaction Nº<%= @myTrans.id %>
+    </p>
+    <p>
+      <%= @myTrans.created_at.strftime("%Y-%m-%d") %>
+    </p>
+  </div>
+  <div>
+    <h3>
+      $<%= @myTrans.amount.round(2) %>
+    </h3>
+  </div>
+</div>

@@ -1,9 +1,17 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# Seed Users
+user1 = User.create!(name: 'John Doe', email: 'john@example.com', password: 'password123')
+user2 = User.create!(name: 'Jane Smith', email: 'jane@example.com', password: 'password456')
+
+# Seed Entities
+entity1 = user1.entities.create!(name: 'Entity 1', amount: 1000)
+entity2 = user1.entities.create!(name: 'Entity 2', amount: 1500)
+entity3 = user2.entities.create!(name: 'Entity 3', amount: 800)
+
+# Seed Groups
+group1 = user1.groups.create!(name: 'Group A', icon: 'icon1')
+group2 = user2.groups.create!(name: 'Group B', icon: 'icon2')
+
+# Seed Entity-Group Relationships
+GroupEntity.create!(group: group1, entity: entity1)
+GroupEntity.create!(group: group1, entity: entity2)
+GroupEntity.create!(group: group2, entity: entity3)

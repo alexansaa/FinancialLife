@@ -1,0 +1,36 @@
+<head>
+  <%= stylesheet_link_tag "registrations" %>
+</head>
+<body>
+  <div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="registrations_header">
+        <div>
+          <%= link_to 'h', root_path, class: "simbols_font" %>
+        </div>
+        <div class="registrations_title proxima_light_font">
+          <h2>REGISTER</h2>
+        </div>
+        <div class="registrations_title">
+          <%= f.submit "Next" %>
+        </div>
+      </div>
+      <div class="registrations_fields">
+        <div>
+          <%= f.text_field :name, placeholder: "Full Name", autofocus: true, class: "registration_input" %>
+        </div>
+        <div>
+          <%= f.email_field :email, placeholder: "Email", autocomplete: "email", class: "registration_input" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password", class: "registration_input" %>
+        </div>
+        <div>
+          <%= f.password_field :password_confirmation, placeholder: "Confirm Password", autocomplete: "new-password", class: "registration_input" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</body>

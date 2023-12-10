@@ -1,0 +1,33 @@
+<head>
+  <%= stylesheet_link_tag "categories" %>
+</head>
+<body>
+  <div>
+    <%= form_with(model: @entity, url: transactions_path, method: :post) do |form| %>
+      <div class="transaction_header proxima_bold_font">
+        <div>
+          <%= link_to "h", category_path(@category), class: "simbols_font" %>
+        </div>
+        <div class="categories_title">
+          NEW TRANSACTION
+        </div>
+        <div class="save_btn">
+          <%= form.submit 'Save' %>
+        </div>
+      </div>
+      <div class="new_transaction_container">
+        <div>
+          <%= form.text_field :name, placeholder: "name", class: "new_transaction_input" %>
+        </div>
+
+        <div>
+          <%= form.number_field :amount, step: '0.01', placeholder: "amount", class: "new_transaction_input" %>
+        </div>
+
+        <div>
+          <%= form.collection_select :category, Group.all, :id, :name, { prompt: 'Select an option' }, placeholder:"category", class: 'select-field' %>
+        </div>
+      </div>
+    <% end %>
+  </div>  
+</body>

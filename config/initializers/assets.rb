@@ -10,3 +10,12 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# config/initializers/assets.rb
+
+Rails.application.config.assets.precompile += %w(
+  websymbols-regular-webfont.woff
+  websymbols-regular-webfont.ttf
+  websymbols-regular-webfont.eot
+  websymbols-regular-webfont.svg
+)

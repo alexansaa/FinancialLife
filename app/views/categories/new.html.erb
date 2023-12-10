@@ -1,0 +1,52 @@
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <%= stylesheet_link_tag "categories" %>
+</head>
+<body>
+  <%= form_with(model: @group, url: categories_path, method: :post) do |form| %>
+    <div class="transaction_header proxima_bold_font">
+      <div>
+        <%= link_to "h", categories_path, class: "simbols_font" %>
+      </div>
+      <div class="categories_title">
+        NEW CATEGORY
+      </div>
+      <div class="save_btn">
+        <%= form.submit 'Save' %>
+      </div>
+    </div>
+
+    <div class="category_input_container">
+      <%= form.text_field :name, placeholder: "Category Name", class: "new_category_input" %>
+    </div>
+
+    <div class="category_icon_select">
+      <%= form.collection_select :icon, @icon_files, :itself, ->(file) { file.split('.').first }, { prompt: 'Select an icon' }, class: 'select-field' %>
+    </div>
+  <% end %>
+  <div id="selected-icon-preview" class="category_new_icon"></div>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var selectField = document.querySelector('.select-field');
+    var previewContainer = document.getElementById('selected-icon-preview');
+
+    if (selectField) {
+      selectField.addEventListener('change', function() {
+        var selectedIcon = this.value;
+        console.log(selectedIcon);
+
+        previewContainer.innerHTML = '';
+
+        if (selectedIcon) {
+          var img = document.createElement('img');
+          img.src = '/assets/categories/' + selectedIcon;
+          img.alt = selectedIcon;
+          previewContainer.appendChild(img);
+        }
+      });
+    }
+  });
+</script>
+

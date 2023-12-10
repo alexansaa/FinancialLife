@@ -1,0 +1,28 @@
+<head>
+  <%= stylesheet_link_tag "categories" %>
+</head>
+<body>
+  <div class="transaction_header proxima_bold_font">
+    <div>
+      <%= link_to "h", categories_path, class: "simbols_font" %>
+    </div>
+    <div class="categories_title">
+      TRANSACTIONS
+    </div>
+    <div>
+      <%= link_to 'L', categories_path, class: "simbols_font" %>
+    </div>
+  </div>
+  <div class="transaction_total proxima_bold_font">
+    <p>Total amout</p>
+    <h3> $<%= @total_amount.round(2) %></h3>
+  </div>
+  <div class="fill_container">
+    <% @transactions.each do |item|  %>
+      <%= render partial: 'transactions/transaction', locals: { transaction: item } %>
+    <% end %>
+  </div>
+  <div class="action_btn proxima_light_font">
+    <%= link_to 'Add New Transaction', new_transaction_path(category_id: @category.id) %>
+  </div>
+</body>

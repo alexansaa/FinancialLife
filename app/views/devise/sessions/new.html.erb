@@ -1,0 +1,31 @@
+<head>
+  <%= stylesheet_link_tag "sessions" %>
+</head>
+<body>
+  <div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="login_header">
+        <div>
+          <%= link_to 'h', root_path, class: "simbols_font" %>
+        </div>
+        <div class="login_title proxima_light_font">
+          <h2>LOGIN</h2>
+        </div>
+        <div class="login_title">
+          <%= f.submit "Log In" %>
+        </div>
+      </div>
+      <div class="login_fields">
+        <div>
+          <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email", class: "session_input" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "session_input" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="session_links proxima_light_font">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</body>
