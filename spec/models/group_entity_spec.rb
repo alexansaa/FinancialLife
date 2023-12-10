@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe GroupEntity, type: :model do
   before do
     @user = FactoryBot.create(:user)
-    @entity = FactoryBot.create(:entity, user: @user)
+    @entity = FactoryBot.create(:entity, user: @user, with_group_entities: true)
     @group = FactoryBot.create(:group, user: @user)
   end
 
