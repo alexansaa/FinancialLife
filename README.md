@@ -14,6 +14,7 @@
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
   - [Live demo](#live-demo)
+  - [Descriptive video](#video)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -124,6 +125,10 @@ Example:
 
 Take a look at the live demo implementation at: https://financiallifeapp.onrender.com/
 
+### Descriptive Video
+
+You can checkout the descriptive video of the application here: https://www.loom.com/share/f2afda34409a4de5934432a52b63a4c0?sid=79f3ed5d-e25e-4def-b3a3-7c83d3c37f31
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -152,7 +157,7 @@ Take a look at the live demo implementation at: https://financiallifeapp.onrende
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/alexansaa/Recipe_App/issues).
+Feel free to check the [issues page](https://github.com/alexansaa/FinancialLife/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

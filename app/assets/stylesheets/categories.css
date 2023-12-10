@@ -162,7 +162,9 @@ body {
 
 .category_input_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .new_category_input {
@@ -172,7 +174,6 @@ body {
   padding-bottom: 9px;
   padding-left: 10px;
   color: black;
-  width: 90%;
 }
 
 .new_category_input::placeholder {
