@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url("websymbols-regular-webfont.eot");
+  src:
+    url("websymbols-regular-webfont.eot#iefix") format('embedded-opentype'),
+    url("websymbols-regular-webfont.woff") format('woff'),
+    url("websymbols-regular-webfont.ttf") format('truetype'),
+    url("websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.transaction_header {
+  background-color: #3778c2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.proxima_bold_font {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+.proxima_light_font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.simbols_font {
+  text-decoration: none;
+  color: white;
+  font-family: 'WebSymbolsRegular', sans-serif;
+  font-size: 30px;
+}
+
+.categories_title {
+  color: white;
+  font-size: 20px;
+}
+
+.action_btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #5fb523;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+}
+
+.action_btn a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  margin: -5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.category_elmnt {
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid darkgray;
+}
+
+.category_elmnt a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category_info {
+  display: flex;
+  flex-direction: row;
+  color: darkgrey;
+}
+
+.category_img_container img {
+  max-height: 45px;
+  margin-right: 15px;
+}
+
+.category_amout {
+  color: black;
+  font-weight: bold;
+}
+
+.no_link {
+  text-decoration: none;
+}
+
+.category_data p {
+  font-size: small;
+  margin-top: 15px;
+}
+
+.transaction_elmnt {
+  background-color: white;
+  border: 1px solid rgb(224, 222, 222);
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.transaction_total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(224, 222, 222);
+}
+
+.transaction_total p {
+  color: darkgrey;
+}
+
+.transaction_data {
+  color: darkgray;
+}
+
+body {
+  background-color: #f5f6f8;
+}
+
+.save_btn {
+  color: white;
+  font-size: 10px;
+}
+
+.save_btn input[type="submit"] {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+}
+
+.category_input_container {
+  display: flex;
+  justify-content: center;
+}
+
+.new_category_input {
+  border: 1px solid rgb(210, 207, 207);
+  background-color: white;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  color: black;
+  width: 90%;
+}
+
+.new_category_input::placeholder {
+  color: rgb(211, 208, 208);
+}
+
+.category_icon_select {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.category_new_icon {
+  text-align: center;
+}
+
+.category_new_icon img {
+  margin: auto;
+  display: block;
+}
+
+.fill_container {
+  overflow-y: auto;
+  margin-bottom: 80px;
+}
+
+.new_transaction_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.new_transaction_container div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.new_transaction_input {
+  border: 1px solid rgb(210, 207, 207);
+  background-color: white;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  color: black;
+  width: 90%;
+  display: flex;
+}
+
+.new_transaction_input::placeholder {
+  color: rgb(211, 208, 208);
+}
