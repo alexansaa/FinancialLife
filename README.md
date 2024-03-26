@@ -23,7 +23,7 @@
 # 📖 [Financial Life app] <a name="about-project"></a>
 
 **[Financial Life app]**
-The Financial Life app helps you stay organized with your economical freedom. You may require to sign in into the application so you can access to  your data and profile. The application will let you check different markets and currency prices arround the world.
+The Financial Life app helps you stay organized with your economic freedom. You may need to sign in to the application to access your data and profile. The application will let you check different spences and incomes in different areas of your life!
 
 ## 🛠 Built With <a name="built-with"></a>
 
